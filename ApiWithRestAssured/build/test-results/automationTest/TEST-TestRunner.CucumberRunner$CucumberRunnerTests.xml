@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="TestRunner.CucumberRunner$CucumberRunnerTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-06-12T11:20:41" hostname="SANTO" time="1.601">
+  <properties/>
+  <testcase name="runScenario[0](&quot;&quot;, &quot;Optional[User registration]&quot;)" classname="TestRunner.CucumberRunner$CucumberRunnerTests" time="1.601"/>
+  <system-out><![CDATA[
+@smoke
+Scenario Outline:                       # src/test/resources/ApiFeatures/UserRegPostReqModel.feature:13
+  Given user has the api 'user'         # StepDefinition.PostApiStepdefs.userHasTheApiPath(java.lang.String)
+  When user hit 'morpheus' and 'leader' # StepDefinition.PostApiStepdefs.userHitNameAndJob(java.lang.String,java.lang.String)
+https://reqres.in/api/user
+{Content-Type=application/json;charset=UTF-8}
+
+The response status is:201
+
+The response in plain text:
+
+{"name":"morpheus","job":"leader","id":"640","createdAt":"2023-06-12T11:20:41.463Z"}
+
+The response in json format:
+{
+    "name": "morpheus",
+    "job": "leader",
+    "id": "640",
+    "createdAt": "2023-06-12T11:20:41.463Z"
+}
+  And call the api with body            # StepDefinition.PostApiStepdefs.callTheApiWithBody()
+leader
+morpheus
+  Then it will return created data      # StepDefinition.PostApiStepdefs.itWillReturnCreatedData()
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
