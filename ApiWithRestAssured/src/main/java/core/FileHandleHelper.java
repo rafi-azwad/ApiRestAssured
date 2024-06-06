@@ -49,8 +49,6 @@ public class FileHandleHelper {
     }
 
 
-
-
     public JSONObject readJsonFile(String filePath){
         JSONObject jsonFile = new JSONObject();
         try {

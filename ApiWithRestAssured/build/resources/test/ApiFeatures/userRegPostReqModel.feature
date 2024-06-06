@@ -9,5 +9,5 @@ Feature: User registration
     Then it will return created data
 
     Examples:
-      | path |   name   |  job  |
-      | user | morpheus | leader|
+      | path  | name     | job    |
+      | users | morpheus | leader|

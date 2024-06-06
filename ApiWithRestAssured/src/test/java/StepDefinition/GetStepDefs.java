@@ -1,13 +1,14 @@
 package StepDefinition;
 
-import com.google.gson.Gson;
+
 import core.ApiCall;
 import core.HeaderFormatHelper;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import io.cucumber.messages.internal.com.google.gson.Gson;
 import io.restassured.response.Response;
-import org.testng.Assert; //used to validate response status
+import org.testng.Assert;
 import repository.remoteRepo.responseRepo.UserGetResponseModel;
 
 import static core.CoreConstrainHelper.base_url;
@@ -18,7 +19,6 @@ public class GetStepDefs {
     private Response responseGetApi;
     private Gson gson = new Gson();
 
-
     @Given("user has the base api")
     public void userHasTheBaseApi() {
 
@@ -28,7 +28,7 @@ public class GetStepDefs {
     @When("user call the {string} and {string}")
     public void userCallTheParameterAndParamsValue(String paraName, String value) {
 
-        url = url + paraName + "=" + value;
+        url = url + paraName + "=" + value; //path of apiCall - https://reqres.in/api/users?page=2
         responseGetApi = ApiCall.getCall(HeaderFormatHelper.commonHeaders(), url);
 
         //        *****Assert*****
@@ -52,9 +52,6 @@ public class GetStepDefs {
         UserGetResponseModel userGetResponseModel = gson.fromJson(responseGetApi.getBody().asString(), UserGetResponseModel.class);
 
         System.out.println(userGetResponseModel.getData().get(0).getFirst_name());
-
-
-
 
 
     }

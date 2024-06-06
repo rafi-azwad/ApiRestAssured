@@ -2,7 +2,7 @@
 <suite name="Suite" >
     <test name="Cucumber Test Run">
         <classes>
-            <class name="TestRunner.CucumberRunner" />
+            <class name="TestRunner.GetApiRunnerTest" />
         </classes>
     </test>
 </suite>

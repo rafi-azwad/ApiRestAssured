@@ -1,6 +1,5 @@
 package StepDefinition;
 
-import com.google.gson.Gson;
 import core.ApiCall;
 import core.FileHandleHelper;
 import core.HeaderFormatHelper;
@@ -13,6 +12,7 @@ import org.json.simple.JSONObject;
 import org.testng.Assert;
 import repository.remoteRepo.requestRepo.UserRegPostReqModel;
 import repository.remoteRepo.responseRepo.UserRegPostResponseModel;
+import io.cucumber.messages.internal.com.google.gson.Gson;
 
 import static core.CoreConstrainHelper.base_url;
 import static core.FilePathHelper.postApiPath;
@@ -45,7 +45,7 @@ public class PostApiStepDefs {
         userRegPostReqModel = new Gson().fromJson(requestBody.toJSONString(),UserRegPostReqModel.class);
         userRegPostReqModel.setJob(job);
         userRegPostReqModel.setName(name);
-        requestModel = gson.toJson(userRegPostReqModel);
+        requestModel = gson.toJson(userRegPostReqModel);  //body
 
     }
 

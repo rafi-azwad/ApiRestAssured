@@ -7,7 +7,6 @@ public class HeaderFormatHelper {
     private static final String CONTENT_TYPE_HEADER_KEY = "Content-Type";
     private static final String AUTHORIZATION_HEADER_KEY = "Authorization";
 
-
     private static final String CONTENT_TYPE_VALUE_APPLICATION_JSON =
             "application/json;charset=UTF-8";
     // private static final String AUTHORIZATION_VALUE = "xnd_public_development_G60DEcjMjYtUBy6VEmFkBc9O3U20L360G26MJkhCV3OvV0xinAkb7ctQut9oH1";
